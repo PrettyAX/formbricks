@@ -189,10 +189,10 @@ export default function EditWelcomeCard({
               </div>
               <div className="flex-column">
                 <Label htmlFor="bahahaha" className="">
-                  BAHAHAHAHAHA
+                  Show number of responses
                 </Label>
                 <div className="text-sm text-gray-500 dark:text-gray-400">
-                  Description for BAHAHAHAHAHA slider
+                  Display the number of responses for survey
                 </div>
               </div>
             </div>
