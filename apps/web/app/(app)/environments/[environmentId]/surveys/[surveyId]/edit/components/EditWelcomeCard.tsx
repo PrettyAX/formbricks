@@ -26,6 +26,7 @@ export default function EditWelcomeCard({
 }: EditWelcomeCardProps) {
   const [firstRender, setFirstRender] = useState(true);
   const path = usePathname();
+  const [bahahahaEnabled, setBahahahaEnabled] = useState(false);
   const environmentId = path?.split("/environments/")[1]?.split("/")[0];
   // const [open, setOpen] = useState(false);
   let open = activeQuestionId == "start";
@@ -174,6 +175,24 @@ export default function EditWelcomeCard({
                 </Label>
                 <div className="text-sm text-gray-500 dark:text-gray-400">
                   Display an estimate of completion time for survey
+                </div>
+              </div>
+            </div>
+            <div className="mt-8 flex items-center">
+              <div className="mr-2">
+                <Switch
+                  id="bahahaha"
+                  name="bahahaha"
+                  checked={localSurvey?.welcomeCard?.bahahaha}
+                  onCheckedChange={() => updateSurvey({ bahahaha: !localSurvey.welcomeCard.bahahaha })}
+                />
+              </div>
+              <div className="flex-column">
+                <Label htmlFor="bahahaha" className="">
+                  BAHAHAHAHAHA
+                </Label>
+                <div className="text-sm text-gray-500 dark:text-gray-400">
+                  Description for BAHAHAHAHAHA slider
                 </div>
               </div>
             </div>
